@@ -1,4 +1,4 @@
-# Stakefish Test Task V1
+# Bitcoin Consecutive Blocks
 
 I used my existing local full node (https://github.com/bcoin-org/bcoin) and it's api and linked the library with npm link bcoin. 
 
