@@ -33,8 +33,8 @@ const start = async (): Promise<void> => {
             results: count
         })
     }
-    console.log("Found ${count} Blocks with more then 2h difference!")
     bar.stop()
+    console.log("Found ${count} Blocks with more then 2h difference!")
 }
 
 start()
