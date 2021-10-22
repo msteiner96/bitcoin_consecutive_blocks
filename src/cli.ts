@@ -22,7 +22,7 @@ const start = async (): Promise<void> => {
     for (let i: number = 0; i <= blockCount; i++) {
         if (oldBlockDate !== 0) {
             const newBlockDate: number = await getBlockDate(i)
-            if (newBlockDate - oldBlockDate > 7200) {
+            if ((newBlockDate - oldBlockDate) > 7200) {
                 count++
             }
             oldBlockDate = newBlockDate
