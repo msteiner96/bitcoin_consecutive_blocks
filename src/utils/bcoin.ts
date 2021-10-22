@@ -2,16 +2,17 @@
 import {NodeClient, Network} from 'bcoin'
 const network: Network = Network.get('main')
 
-// Client options object interface
+// Client Options Interface
 interface ClientOptions {
 	network: string,
 	port: number
 }
 
-// Bcoin Client
+// Bcoin Client Options
 const clientOptions: ClientOptions = {
 	network: network.type,
 	port: network.rpcPort
 }
 
-const client: typeof NodeClient = new NodeClient(clientOptions)
+// Open Client
+const client: NodeClient = new NodeClient(clientOptions)
