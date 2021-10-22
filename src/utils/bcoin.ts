@@ -1,5 +1,5 @@
 // Dependencies
-import {NodeClient, Network} from 'bcoin'
+import { NodeClient, Network } from 'bcoin'
 const network: Network = Network.get('main')
 
 // Client Options Interface
@@ -22,8 +22,8 @@ const client: NodeClient = new NodeClient(clientOptions)
  * 
  * @returns Total Blockcount
  */
-export const getBlockCount = async () : Promise<number> => {
-    return await client.execute('getblockcount')
+export const getBlockCount = async (): Promise<number> => {
+	return await client.execute('getblockcount')
 }
 
 /**
@@ -32,7 +32,7 @@ export const getBlockCount = async () : Promise<number> => {
  * @param blockHeight
  * @returns Timestamp of a block
  */
-export const getBlockDate = async (blockHeight: number) : Promise<number> => {
-    const response = await client.execute('getblockbyheight', [blockHeight, true, false])
-    return response.time
+export const getBlockDate = async (blockHeight: number): Promise<number> => {
+	const response = await client.execute('getblockbyheight', [blockHeight, true, false])
+	return response.time
 }
