@@ -11,7 +11,7 @@ test('Getting total Blockcount', async t => {
     t.true(result > 0)
 })
 
-// Getting blockDate of an block
+// Getting blockDate of a block
 test('Get timestamp from an block', async t => {
     const result: number = await getBlockDate(Math.floor(Math.random() * 100))
     t.true(result > 0, "Timestamp over 0")
